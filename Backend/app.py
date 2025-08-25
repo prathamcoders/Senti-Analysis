@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from flask_pymongo import PyMongo
 from werkzeug.utils import secure_filename
@@ -33,6 +33,15 @@ except Exception as e:
 tokenizer = AutoTokenizer.from_pretrained("KPROCKS/Model")
 model = AutoModelForSequenceClassification.from_pretrained("KPROCKS/Model")
 model.eval()
+
+# Serve React build files
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_react(path):
+    if path != "" and os.path.exists(os.path.join('../build', path)):
+        return send_from_directory('../build', path)
+    else:
+        return send_from_directory('../build', 'index.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
