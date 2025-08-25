@@ -1,13 +1,115 @@
+/* src/index.css */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #555;
+}
+
+.navbar {
+  position: sticky;
+  top: 0; /* Sticks to the top when scrolling */
+  z-index: 1000; /* Ensure it stays above other content */
+  padding: 20px;
+  display: flex;
+  background-color: #333;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 60px;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
+.navbar img {
+  height: 55px;
+  padding: 20px;
+}
+
+.navbar h1 {
+  color: #f1356d;
+}
+
+.navbar .links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 6px;
+  transition: color 0.3s ease;
+  color:#007bff;
+}
+
+.navbar a:hover {
+  color: #f1356d;
+}
+.Home-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.3rem;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.Home-card:hover {
+  transform: translateY(-5px);
+}
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.Csv{
+  border: none;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Csv:hover {
+  background-color: #0056b3;
+}
+.single {
+  border: none;
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.single:hover{
+  background-color:#890000;
+}
+.footer{
+  background-color: #1f2937;
+    color: white;
+    padding: 1.5rem;
+    margin-top: 3rem;
 }

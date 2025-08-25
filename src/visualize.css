@@ -1,0 +1,166 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 24px;
+  }
+  
+  .card-content {
+    padding: 24px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .info-box {
+    background-color: #e6f2ff;
+    border-left: 4px solid #3498db;
+    color: #2c3e50;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .info-title {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .info-text {
+    margin: 0;
+  }
+  
+  .upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .file-label:hover {
+    background-color: #2980b9;
+  }
+  
+  .file-label.uploading {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .upload-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .status-message {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 4px;
+  }
+  
+  .status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .status-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .status-text {
+    font-weight: bold;
+  }
+  
+  .button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .view-results-button {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .view-results-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .visualization-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .visualization-list li {
+    margin-bottom: 8px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
