@@ -41,7 +41,7 @@ def serve_react(path):
     if path != "" and os.path.exists(os.path.join('../build', path)):
         return send_from_directory('../build', path)
     else:
-        return send_from_directory('../build', 'index.html')
+        return send_from_directory('../build', 'index.js')
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
