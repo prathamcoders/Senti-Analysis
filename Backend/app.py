@@ -9,7 +9,7 @@ import torch
 from urllib.parse import quote_plus
 import logging
 
-app = Flask(__name__, static_folder="../build")
+app = Flask(__name__, static_folder="../build", static_url_path="")
 CORS(app)
 
 username = 'prathamshahps000'
@@ -35,18 +35,17 @@ model = AutoModelForSequenceClassification.from_pretrained("KPROCKS/Model")
 model.eval()
 
 # Serve React build files
-
-
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve_react(path):
-    # Full path to build folder
     build_dir = os.path.join(os.path.dirname(__file__), "../build")
 
-    # If the file exists in the build folder, serve it
-    if path != "" and os.path.exists(os.path.join(build_dir, path)):
+    # Serve React static files if they exist
+    file_path = os.path.join(build_dir, path)
+    if path and os.path.isfile(file_path):
         return send_from_directory(build_dir, path)
-    # Otherwise, serve index.html (React handles routing on client side)
+    
+    # Otherwise return React index.html for SPA routing
     return send_from_directory(build_dir, 'index.html')
 
 @app.route('/upload', methods=['POST'])
